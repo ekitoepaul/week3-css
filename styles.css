@@ -1,3 +1,24 @@
 body {
   background-color: #fff7ed;
 }
+/* 1. Make all main headings dark brown using one grouped rule */
+h1,
+h2,
+h3 {
+  color:darkbrown;
+}
+/* 2. Make prices green and bold using a class selector */
+.price {
+  color:green;
+  font-weight:bold;  
+}
+ <p class="price">Ksh 350</p>
+
+ /* 3. Make only navigation links white using a descendant selector */
+ header nav a {
+  color: white;
+}
+ /* 4. Give the featured card a different heading colour */
+.featured h3{
+  color:orange;
+}
