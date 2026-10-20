@@ -11,12 +11,12 @@ h1,
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", serif;
-  color: #7c2d12;
+  color: #7c2d10;
   line-height: 1.2;
 }
 /* 3. The header bar */
 .site-header {
-  background-color: #7c2d12;
+  background-color: #7c2d10;
   padding: 16px 24px;
 }
 
