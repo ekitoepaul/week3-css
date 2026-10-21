@@ -61,10 +61,12 @@
     <section id="contact">
       <h2>Contact us</h2>
       <form class="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <label for="firstname"> first Name</label>
+        <input type="text" id="firstname" name="firstname" type="text" autocomplete="given-name" />
+        <label for="lastName">Last Name:</label>
+        <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" type="email" autocomplete="off" />
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="4"></textarea>
         <button type="submit">Send message</button>

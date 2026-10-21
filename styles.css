@@ -43,6 +43,9 @@ body {
   --menu-card-border-radius: 12px;
   --menu-card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   --section-spacing: 3rem;
+  --card-padding: 1.5rem;
+  --card-border: #e5e7eb;
+  --card-radius: 12px;
 }
  
 /* 1. Defaults for the whole page */
