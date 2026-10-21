@@ -61,6 +61,7 @@ body {
   background-color: var(--color-background);
   padding: var(--space-4);
   margin-bottom: var(--section-spacing, 3rem);
+  font-family: "Inter", Arial, sans-serif;
   }
 p,
 li {
@@ -72,9 +73,16 @@ a {
 .inter-hero {
   font-family: "Inter", Arial, sans-serif;
   font-optical-sizing: auto;
-  font-weight: <400>;
+  font-weight: 400;
   font-style: normal;
 }
+.playfair-display-heading {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .main-nav a {
   text-decoration: none;
 }
@@ -94,6 +102,7 @@ h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
   padding-bottom: var(--space-2);
+  font-family: "Playfair Display", Georgia, serif;
   }
  
   h1 {
@@ -136,26 +145,25 @@ h3 {
   font-style: normal;
 }
 
-.hero-section {
+.hero {
   min-height: 60vh;
   margin-bottom: 0;
   background-color: rgb(229, 235, 235);
-}
-
-.hero-section p {
-  max-width: 65ch;
-}
-
-.logo {
+}.logo {
   color: var(--color-primary-tint);
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .main-nav a {
-  color: var(--color-primary-tint);
-  margin-right: var(--space-2);
-  margin-bottom: 0;
+  text-decoration: none;   /* navigation is obviously clickable, so no underline */
+}
+.old-price {
+  text-decoration: line-through;
+}
+p a {
+  text-decoration-color: hsl(20 90% 45%);
+  text-underline-offset: 3px;   /* moves the line slightly below the text */
 }
 
 /* 4. Menu Cards */
@@ -198,4 +206,4 @@ h3 {
   color: var(--color-primary-tint);
   text-align: center;
   padding: var(--space-4);
-}
+   }
