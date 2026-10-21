@@ -64,7 +64,12 @@ body {
   font-family: "Inter", Arial, sans-serif;
   }
 
-  
+  /* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 p,
 li {
   max-width: 65ch;
