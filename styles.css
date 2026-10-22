@@ -52,6 +52,10 @@ body {
   --card-padding: 1.5rem;
   --card-border: #e5e7eb;
   --card-radius: 12px;
+  --z-badge: 1;
+  --z-header: 10;
+  --z-floating: 20;   /* fixed buttons */
+  --z-modal: 100;
 }
  
 /* 1. Defaults for the whole page */
@@ -70,6 +74,25 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;                         /* covers the whole window */
+  background-color: rgb(0 0 0 / 0.5);
+  z-index: var(--z-modal);
+}
+
+.dialog {
+  max-width: 24rem;
+  margin: 20vh auto 0;              /* centred horizontally, 20% from the top */
+  padding: var(--space-5);
+  background-color: var(--color-surface);
+  border-radius: 12px;
+}
+
+.is-hidden {
+  visibility: hidden;
 }
 
 p,
