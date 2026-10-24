@@ -69,7 +69,101 @@ body {
   margin-bottom: var(--section-spacing, 3rem);
   font-family: "Inter", Arial, sans-serif;
   }
+/* Base navigation link styles */
+nav a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #1d4ed8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
+/* Mouse hover */
+nav a:hover {
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+/* Keyboard focus */
+nav a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+}
+
+/* Base button styles */
+.cta {
+  padding: 0.65rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #16a34a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Mouse hover */
+.cta:hover {
+  background-color: #15803d;
+}
+
+/* Keyboard focus */
+.cta:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* Optional: pressed state */
+.cta:active {
+  transform: scale(0.98);
+}
+
+/* Base form field styles */
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: #1f2937;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus style for every form field */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+/* Invalid email after the user interacts with it and clicks away */
+.contact-form input[type="email"]:user-invalid {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.20);
+}
+
+/* Show the error message only when the email field is user-invalid */
+.email-error {
+  display: none;
+  margin-top: 0.35rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+.contact-form input[type="email"]:user-invalid + .email-error {
+  display: block;
+}
+  
   /* Make images responsive */
 img {
   max-width: 100%;
@@ -187,6 +281,75 @@ h3 {
   font-weight: 700;
 }
 
+.section-heading {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  color: #111827;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  margin-top: 0.5rem;
+  background-color: #2563eb; /* blue bar */
+  border-radius: 999px;
+}
+
+/* Navigation links */
+nav a {
+  color: #1d4ed8;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #b91c1c;
+}
+
+/* Button */
+.button {
+  color: #ffffff;
+  background-color: #16a34a;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: #fef08a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  color: #1f2937;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1; /* starting border colour */
+  border-radius: 8px;
+
+  /* Fade the border colour over 200 ms */
+  transition: border-color 200ms ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb; /* focused border colour */
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.button {
+  transition: background-color 200ms ease, transform 100ms ease;
+}
+.button:hover  { background-color: var(--color-primary-dark); }
+.button:active { transform: scale(0.97); }
 .main-nav a {
   text-decoration: none;   /* navigation is obviously clickable, so no underline */
 }
@@ -330,6 +493,14 @@ p a {
    object-fit: cover;
   }
 
+  .card {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+}
 .menu-card-image {
   display: block;
   width: 100%;
@@ -385,4 +556,14 @@ p a {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
