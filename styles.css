@@ -567,3 +567,71 @@ p a {
     scroll-behavior: auto !important;
   }
 }
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, border-color 200ms ease, transform 100ms ease;
+}
+
+.button:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* A less important action: outline style */
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-primary-light);
+}
+.contact-form label {
+  display: block;               /* labels on their own line, above the field */
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.75rem;
+  border: 1px solid #6b7280;  /* 4.83 to 1 on white (3 to 1 needed) */
+  border-radius: 6px;
+  background-color: var(--color-surface);
+  transition: border-color 200ms ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid var(--color-primary-light);
+}
+
+.contact-form textarea {
+  resize: vertical;             /* users can make it taller, not wider */
+}
+
+.contact-form button {
+  margin-top: var(--space-4);
+}
